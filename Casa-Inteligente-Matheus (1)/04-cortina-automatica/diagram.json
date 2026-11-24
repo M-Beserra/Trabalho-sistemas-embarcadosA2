@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "author": "Matheus Beserra dos Santos",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -230,
+      "left": 10,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 170,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "modo",
+      "top": -30,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "abrir",
+      "top": 40,
+      "left": 420,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "fechar",
+      "top": 100,
+      "left": 420,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": -210,
+      "left": 330,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "lcd:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "lcd:SDA",
+      "uno:A4",
+      "blue",
+      []
+    ],
+    [
+      "lcd:SCL",
+      "uno:A5",
+      "purple",
+      []
+    ],
+    [
+      "ldr:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "ldr:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "ldr:AO",
+      "uno:A0",
+      "green",
+      []
+    ],
+    [
+      "modo:2",
+      "uno:4",
+      "green",
+      []
+    ],
+    [
+      "modo:1",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "modo:3",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "abrir:1.l",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "abrir:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "fechar:1.l",
+      "uno:3",
+      "green",
+      []
+    ],
+    [
+      "fechar:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "servo:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo:V+",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "servo:PWM",
+      "uno:6",
+      "orange",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

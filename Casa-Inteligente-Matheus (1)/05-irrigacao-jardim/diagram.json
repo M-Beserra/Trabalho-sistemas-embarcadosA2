@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "author": "Matheus Beserra dos Santos",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -230,
+      "left": 10,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "solo",
+      "top": 230,
+      "left": -200,
+      "attrs": {
+        "value": "600"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "chuva",
+      "top": -40,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "regar",
+      "top": 30,
+      "left": 330,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "rele",
+      "top": 120,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "carga",
+      "top": 110,
+      "left": 480,
+      "attrs": {
+        "color": "blue",
+        "label": "Carga"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rcarga",
+      "top": 185,
+      "left": 475,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "lcd:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "lcd:SDA",
+      "uno:A4",
+      "blue",
+      []
+    ],
+    [
+      "lcd:SCL",
+      "uno:A5",
+      "purple",
+      []
+    ],
+    [
+      "solo:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "solo:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "solo:SIG",
+      "uno:A0",
+      "green",
+      []
+    ],
+    [
+      "chuva:2",
+      "uno:4",
+      "green",
+      []
+    ],
+    [
+      "chuva:1",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "chuva:3",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "regar:1.l",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "regar:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "rele:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "rele:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "rele:IN",
+      "uno:7",
+      "green",
+      []
+    ],
+    [
+      "rele:COM",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "rele:NO",
+      "carga:A",
+      "orange",
+      []
+    ],
+    [
+      "carga:C",
+      "rcarga:1",
+      "gray",
+      []
+    ],
+    [
+      "rcarga:2",
+      "uno:GND.2",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

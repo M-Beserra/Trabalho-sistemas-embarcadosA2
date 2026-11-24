@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "author": "Matheus Beserra dos Santos",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -230,
+      "left": 10,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-ir-receiver",
+      "id": "ir",
+      "top": -40,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ir-remote",
+      "id": "remote",
+      "top": -120,
+      "left": 450,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "barreira",
+      "top": 130,
+      "left": 330,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": -210,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -60,
+      "left": -110,
+      "attrs": {
+        "color": "orange",
+        "label": "Alerta"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 10,
+      "left": -115,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "lcd:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "lcd:SDA",
+      "uno:A4",
+      "blue",
+      []
+    ],
+    [
+      "lcd:SCL",
+      "uno:A5",
+      "purple",
+      []
+    ],
+    [
+      "ir:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "ir:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "ir:DAT",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "barreira:1.l",
+      "uno:3",
+      "green",
+      []
+    ],
+    [
+      "barreira:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "servo:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo:V+",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "servo:PWM",
+      "uno:9",
+      "orange",
+      []
+    ],
+    [
+      "uno:7",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "led1:C",
+      "r1:1",
+      "gray",
+      []
+    ],
+    [
+      "r1:2",
+      "uno:GND.2",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "author": "Matheus Beserra dos Santos",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -110,
+      "left": 340,
+      "attrs": {
+        "temperature": "25",
+        "humidity": "50"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "modo",
+      "top": 120,
+      "left": 340,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "display",
+      "top": -160,
+      "left": 60,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -60,
+      "left": -110,
+      "attrs": {
+        "color": "blue",
+        "label": "Motor"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 10,
+      "left": -115,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "dht:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "dht:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "dht:SDA",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "modo:1.l",
+      "uno:3",
+      "green",
+      []
+    ],
+    [
+      "modo:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "display:A",
+      "uno:4",
+      "gold",
+      []
+    ],
+    [
+      "display:B",
+      "uno:5",
+      "gold",
+      []
+    ],
+    [
+      "display:C",
+      "uno:6",
+      "gold",
+      []
+    ],
+    [
+      "display:D",
+      "uno:7",
+      "gold",
+      []
+    ],
+    [
+      "display:E",
+      "uno:8",
+      "gold",
+      []
+    ],
+    [
+      "display:F",
+      "uno:10",
+      "gold",
+      []
+    ],
+    [
+      "display:G",
+      "uno:11",
+      "gold",
+      []
+    ],
+    [
+      "display:DP",
+      "uno:12",
+      "gold",
+      []
+    ],
+    [
+      "display:COM.1",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:9",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "led1:C",
+      "r1:1",
+      "gray",
+      []
+    ],
+    [
+      "r1:2",
+      "uno:GND.2",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

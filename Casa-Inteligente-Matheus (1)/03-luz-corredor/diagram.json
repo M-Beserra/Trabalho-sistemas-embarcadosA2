@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "author": "Matheus Beserra dos Santos",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir",
+      "top": -90,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 80,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -60,
+      "left": -110,
+      "attrs": {
+        "color": "white",
+        "label": "Lampada"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 10,
+      "left": -115,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "pir:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "pir:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pir:OUT",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "ldr:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "ldr:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "ldr:AO",
+      "uno:A0",
+      "green",
+      []
+    ],
+    [
+      "uno:9",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "led1:C",
+      "r1:1",
+      "gray",
+      []
+    ],
+    [
+      "r1:2",
+      "uno:GND.2",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

@@ -53,4 +53,4 @@ Cada pasta é um projeto completo:
 
 ## Artigo
 
-[`documentacao/`](documentacao) contém o artigo no formato SBC: o PDF, o LaTeX, as referências e os esquemas dos circuitos.
+O artigo completo está em [`documentacao/Trabalho_A2_Sistemas_Embarcados_Matheus_Santos.pdf`](documentacao/Trabalho_A2_Sistemas_Embarcados_Matheus_Santos.pdf). A mesma pasta tem o LaTeX, as referências e os esquemas dos circuitos.

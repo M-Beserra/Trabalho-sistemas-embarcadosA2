@@ -1,0 +1,4 @@
+# Wokwi Library List
+HX711
+Servo
+LiquidCrystal I2C
