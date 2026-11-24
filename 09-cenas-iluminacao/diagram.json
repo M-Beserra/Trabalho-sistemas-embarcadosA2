@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "author": "Matheus Beserra dos Santos",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -230,
+      "left": 10,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb",
+      "top": -80,
+      "left": -110,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "cena",
+      "top": 0,
+      "left": 330,
+      "attrs": {
+        "color": "blue"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "desligar",
+      "top": 90,
+      "left": 330,
+      "attrs": {
+        "color": "black"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "brilho",
+      "top": 230,
+      "left": -200,
+      "attrs": {
+        "value": "1023"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "lcd:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "lcd:SDA",
+      "uno:A4",
+      "blue",
+      []
+    ],
+    [
+      "lcd:SCL",
+      "uno:A5",
+      "purple",
+      []
+    ],
+    [
+      "rgb:R",
+      "uno:9",
+      "red",
+      []
+    ],
+    [
+      "rgb:G",
+      "uno:10",
+      "green",
+      []
+    ],
+    [
+      "rgb:B",
+      "uno:11",
+      "blue",
+      []
+    ],
+    [
+      "rgb:COM",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "cena:1.l",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "cena:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "desligar:1.l",
+      "uno:3",
+      "green",
+      []
+    ],
+    [
+      "desligar:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "brilho:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "brilho:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "brilho:SIG",
+      "uno:A0",
+      "green",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

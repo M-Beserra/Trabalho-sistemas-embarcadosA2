@@ -1,0 +1,8 @@
+documentacao/*.aux
+documentacao/*.bbl
+documentacao/*.blg
+documentacao/*.fls
+documentacao/*.fdb_latexmk
+documentacao/*.log
+documentacao/*.out
+documentacao/main.pdf

@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "author": "Matheus Beserra dos Santos",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -230,
+      "left": 10,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "balanca",
+      "top": 250,
+      "left": -40,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "servir",
+      "top": 20,
+      "left": 330,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": -210,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz",
+      "top": 90,
+      "left": -230,
+      "attrs": {
+        "volume": "0.1"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -60,
+      "left": -110,
+      "attrs": {
+        "color": "red",
+        "label": "Vazio"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 10,
+      "left": -115,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "lcd:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "lcd:SDA",
+      "uno:A4",
+      "blue",
+      []
+    ],
+    [
+      "lcd:SCL",
+      "uno:A5",
+      "purple",
+      []
+    ],
+    [
+      "balanca:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "balanca:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "balanca:DT",
+      "uno:A1",
+      "green",
+      []
+    ],
+    [
+      "balanca:SCK",
+      "uno:A0",
+      "blue",
+      []
+    ],
+    [
+      "servir:1.l",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "servir:2.r",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "servo:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo:V+",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "servo:PWM",
+      "uno:6",
+      "orange",
+      []
+    ],
+    [
+      "bz:1",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "bz:2",
+      "uno:8",
+      "orange",
+      []
+    ],
+    [
+      "uno:9",
+      "led1:A",
+      "green",
+      []
+    ],
+    [
+      "led1:C",
+      "r1:1",
+      "gray",
+      []
+    ],
+    [
+      "r1:2",
+      "uno:GND.2",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
